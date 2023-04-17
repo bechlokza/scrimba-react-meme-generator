@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Karla:wght@400;700&display=swap');
+
+
+@import "card.scss";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  max-width: 550px;
+  padding: 7px;
+  background: #fff;
+  color: #000;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+nav {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 30px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  border-radius: 25px 25px 0 0;
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20.7482px;
+  line-height: 24px;
+  letter-spacing: -0.1em;
+  color: #FFFFFF;
+
+  img {
+    margin-right: 7px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 37px);
+  padding: 40px 40px 100px;
+  overflow-x: hidden;
+
+  .card:last-child {
+    border-bottom: none;
+  }
+
+ 
+
+  .meme-generator {
+    &__form {
+     margin-top: 10px;
+    }
+
+    &__form-inputs {
+      display: flex;
+      justify-content: space-between;
+      max-width: 477px;
+      margin-bottom: 20px;
+    }
+
+    &__form-input {
+      width: 44%;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: 'Karla', sans-serif;
+      font-size: 12px;
+      color: #0D0D0D;
+
+      &:focus-visible {
+       outline: 2px solid orange;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+      font-family: 'Karla', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+
+      &:focus-visible {
+        outline: 2px solid orange;
+       }
+ 
+    }
+  }
+}
