@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Inter:wght@400;500;700&display=swap');
 
 
 @import "card.scss";
@@ -63,16 +63,20 @@ main {
     }
 
     &__form-inputs {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
       max-width: 477px;
       margin-bottom: 20px;
     }
 
     &__form-input {
-      width: 44%;
+
       background: #fff;
       border: 1px solid #ccc;
+      margin: 20px 10px 20px 0;
       padding: 10px;
       border-radius: 5px;
       font-family: 'Karla', sans-serif;
@@ -83,16 +87,24 @@ main {
        outline: 2px solid orange;
       }
 
-      &:last-child {
+      &:first-of-type {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      &:last-of-type {
+        grid-area: 1 / 2 / 2 / 3;
         margin-right: 0;
+        margin-left: 10px;
       }
     }
 
     &__button {
+      grid-area: 2 / 1 / 3 / 3;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
+      margin-bottom: 20px;
       padding: 10px;
       border: none;
       border-radius: 5px;
@@ -104,7 +116,47 @@ main {
       &:focus-visible {
         outline: 2px solid orange;
        }
- 
+    }
+
+    &__produced {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    &__image {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    &__subheader {
+      position: absolute;
+      font-family: 'Allerta Stencil', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+
+      &:first-of-type {
+        top: 0;
+      }
+
+      &:last-of-type {
+        bottom: 0;
+      }
     }
   }
 }
